@@ -152,7 +152,7 @@ namespace Microsoft.Toolkit.Uwp.Services.OneDrive
         }
 
         /// <summary>
-        /// Gets or sets gets GraphServiceClient instance
+        /// Gets or sets GraphServiceClient instance
         /// </summary>
         internal IOneDriveClient Provider
         {
@@ -200,7 +200,7 @@ namespace Microsoft.Toolkit.Uwp.Services.OneDrive
             }
 
             // ParentReference null means is root
-            if (oneDriveItem.ParentReference != null)
+            if(oneDriveItem.ParentReference?.Path != null)
             {
                 _path = oneDriveItem.ParentReference.Path.Replace("/drive/root:", string.Empty);
             }
